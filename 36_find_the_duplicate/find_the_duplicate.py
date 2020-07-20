@@ -13,3 +13,15 @@ def find_the_duplicate(nums):
         >>> find_the_duplicate([2, 1, 3, 4]) is None
         True
     """
+    # create an empty list:  checked_nums = []
+    # loop thru the list
+    # for each num, if it's not in checked_nums, add it.  If it is in there, that's the dupe
+
+    checked_nums = []
+
+    for num in nums:
+        if checked_nums.count(num) > 0:
+            return num
+        if checked_nums.count(num) == 0:
+            checked_nums.append(num)
+    return None
